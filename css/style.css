@@ -1,0 +1,118 @@
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@400;500;700&display=swap');
+
+:root {
+    --font-fam: 'League Spartan', sans-serif;
+    
+    --fw-light: 400;
+    --fw-medium: 500;
+    --fw-bold: 700;
+
+    --fs-400: 1.125rem;
+    --fs-500: 1.25rem;
+    --fs-600: 1.5rem;
+    --fs-700: 1.75rem;
+    --fs-800: 2rem;
+    --fs-900: 3rem;
+
+    --clr-primary: hsl(300, 43%, 22%);
+    --clr-light-magenta: hsl(303, 10%, 53%);
+    --clr-light-pink: hsl(300, 24%, 96%);
+    --clr-pink: hsl(333, 80%, 67%);
+    --clr-white: hsl(0, 0%, 100%)
+
+}
+
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font: inherit;
+}
+
+img {
+    max-width: 100%;
+}
+
+body {
+    min-height: 100vh;
+    display: grid;
+    place-items: center;
+    font-family: var(--font-fam);
+}
+
+
+main {
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+}
+
+
+
+/* SECITION 1*/
+.row-1 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+/* Heading text */
+.heading-box {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    max-width: 25rem;
+}
+
+.heading-box .title {
+    font-weight: var(--fw-bold);
+    font-size: var(--fs-900);
+    color: var(--clr-primary);
+    line-height: 3rem;
+}
+
+.heading-box .text {
+    color: var(--clr-light-magenta);
+    font-weight: var(--fw-medium);
+    line-height: 1.5rem;
+}
+
+/* Ratings layout */
+.ratings-box {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 8fr 1fr 1fr 1fr;
+    grid-template-rows: 3.5rem 3.5rem 3.5rem;
+    padding: 2rem 0;
+    gap: 1rem;
+}
+
+.ratings-box .rating.r1 {
+    grid-column: 1 / 6;
+    grid-row: 1 / 2;
+}
+
+.ratings-box .rating.r2 {
+    grid-column: 2 / 7;
+    grid-row: 2 / 3;
+}
+
+.ratings-box .rating.r3 {
+    grid-column: 3 / 8;
+    grid-row: 3 / 4;
+}
+
+.rating {
+    background-color: var(--clr-light-pink);  
+    display: flex; 
+    align-items: center;
+    justify-content: center;
+    gap: .5rem;
+    padding: 1rem;
+    padding-right: 2rem;
+    border-radius: .5rem;
+}
+
+.rating span {
+    margin-left: 1.5rem;
+    font-weight: var(--fw-bold);
+    font-size: .9rem;
+}
