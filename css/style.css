@@ -43,8 +43,11 @@ body {
 
 
 main {
+    max-width: 70rem;
     display: grid;
     grid-template-rows: 1fr 1fr;
+    gap: 4rem;
+    margin: 6rem 2rem;
 }
 
 
@@ -104,15 +107,122 @@ main {
     background-color: var(--clr-light-pink);  
     display: flex; 
     align-items: center;
-    justify-content: center;
     gap: .5rem;
     padding: 1rem;
-    padding-right: 2rem;
+    padding-left: 2rem;
     border-radius: .5rem;
 }
 
 .rating span {
     margin-left: 1.5rem;
     font-weight: var(--fw-bold);
-    font-size: .9rem;
+    color: var(--clr-primary);
+}
+
+
+
+/* SECTION 2 */
+
+/* Layout */
+.row-2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 100fr 1fr 1fr 1fr;
+    gap: 1.5rem;
+}
+
+.testimony-box {
+    background-color: var(--clr-primary);
+    border-radius: .5rem;
+    padding: 2.5rem;
+    display: grid;
+    gap: 1.5rem;
+}
+
+.testimony-box.t1 {
+    grid-column: 1 / 2;
+    grid-row: 1 / 6;
+}
+
+.testimony-box.t2 {
+    grid-column: 2 / 3;
+    grid-row: 2 / 7;
+
+}
+.testimony-box.t3 {
+    grid-column: 3 / 4;
+    grid-row: 3 / 8;
+}
+
+/* Styles */
+.person-info {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+}
+
+.person-info img {
+    border-radius: 100%;
+    max-width: 2.5rem;
+}
+
+.person-info div span {
+    display: block;
+}
+
+
+.person-info .name {
+    color: var(--clr-light-pink);
+    font-weight: var(--fw-bold);
+}
+
+.person-info .atribution {
+    color: var(--clr-pink);
+}
+
+.testimony-box .text {
+    color: var(--clr-light-pink);
+    font-weight: var(--fw-light);
+}
+
+
+
+/* MEDIA QUERIES */
+@media (max-width: 930px) {
+    main {
+        display: flex;
+        flex-direction: column;
+        gap: 3rem;
+    }
+
+    .row-1 {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .heading-box {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        align-self: center;
+    }
+
+
+
+    .ratings-box {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .rating {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+
+    .row-2 {
+        display: flex;
+        flex-direction: column;
+    }
 }
