@@ -46,8 +46,8 @@ main {
     max-width: 70rem;
     display: grid;
     grid-template-rows: 1fr 1fr;
-    gap: 4rem;
-    margin: 6rem 2rem;
+    gap: 3rem;
+    margin: 0 2rem;
 }
 
 
@@ -193,6 +193,7 @@ main {
         display: flex;
         flex-direction: column;
         gap: 3rem;
+        margin: 6rem 2rem;
     }
 
     .row-1 {
